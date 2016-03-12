@@ -19,28 +19,28 @@ offCampusEatingLocationsFactory) {
 
     // Model for the search and list example
     $scope.model = [{
-        title: "item 1",
-        details: "item 1 details",
+        title: "Waterloo Star",
+        details: "Waterloo Star details",
         category: '1'
     }, {
-        title: "item 2",
-        details: "item 2 details",
+        title: "Sogo",
+        details: "Sogo details",
         category: '2'
     }, {
-        title: "item 3",
-        details: "item 3 details",
+        title: "Kenzo",
+        details: "Kenzo details",
         category: '1'
     }, {
-        title: "item 4",
-        details: "item 4 details",
+        title: "Williams",
+        details: "Williams details",
         category: '2'
     }, {
-        title: "item 5",
-        details: "item 5 details",
+        title: "Nuri Village",
+        details: "Nuri Village details",
         category: '1'
     }, {
-        title: "item 6",
-        details: "item 6 details",
+        title: "Mr. Sushi",
+        details: "Mr. Sushi details",
         category: '2'
     }];
 
