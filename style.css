@@ -1,7 +1,10 @@
 .header{
     color: #912;
     font-weight: 600;
-    line-height: 1.3em;
+    line-height: 1.3em;   
 }
 
-
+.main{
+    font-weight: 400;
+    line-height: 1.3em;
+}
