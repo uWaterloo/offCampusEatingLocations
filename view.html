@@ -74,7 +74,18 @@
             <div class="pHighlight">{{item.value.details}}</div>
         </widget-cell>
     </widget-row>
-               <widget-row>
+<div ng-if="dbData.value.status">
+            <widget-row>
+                <widget-cell>
+                    <div class="pDetails" ng-if="dbData.value.status=='noTable'">
+                        Table does not exist,
+                        <a ng-click="createTable()">create table</a>.
+                    </div>
+                </widget-cell>
+            </widget-row>
+        </div>
+        <div ng-if="!dbData.value.status">
+            <widget-row>
                 <widget-cell>
                     <form class="form-inline" ng-submit="insertData()">
                         <div class="input-group" style="width: 100%;">
@@ -94,4 +105,5 @@
                     <div class="pDetails">Value: {{item.value}}</div>
                 </widget-cell>
             </widget-row>
+        </div>
 </script>
