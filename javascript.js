@@ -20,32 +20,32 @@ offCampusEatingLocationsFactory) {
     $scope.model = [{
         title: "Waterloo Star",
         address: "170 University Ave W, Waterloo, ON N2L 3E9, Canada",
-        foodType: "Eastern",
+        style: "Eastern",
         ratings: '5'
     }, {
         title: "Sogo",
         address: "170 University Ave W, Waterloo, ON N2L 3E9, Canada",
-        foodType: "Eastern",
+        style: "Eastern",
         ratings: '5'
     }, {
         title: "Kenzo",
         address: "140 University Avenue #6A, Waterloo, ON N2L 6J3, Canada",
-        foodType: "Eastern",
+        style: "Eastern",
         ratings: '5'
     }, {
         title: "Williams",
         address: "170 University Ave W, Waterloo, ON N2L 3E9, Canada",
-        foodType: "Eastern",
+        style: "Eastern",
         ratings: '5'
     }, {
         title: "Nuri Village",
-        address: "170 University Ave W, Waterloo, ON N2L 3E9, Canada",
+        style: "170 University Ave W, Waterloo, ON N2L 3E9, Canada",
         foodType: "Eastern",
         ratings: '5'
     }, {
         title: "Mr. Sushi",
         address: "140 University Avenue, Waterloo, ON N2L 6J3, Canada",
-        foodType: "Eastern",
+        style: "Eastern",
         ratings: '5'
     }];
 
