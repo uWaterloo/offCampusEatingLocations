@@ -119,7 +119,7 @@ angular.module('portalApp')
                     value: $scope.insertValue.value,
                     restaurant: item.value.title,
                     date: d.toDateString(),
-                    rating: 5
+                    rating: $scope.getRadioValue()
                 }).then(function(result) {
                     $scope.dbData.value = result;
                 });
@@ -153,6 +153,23 @@ angular.module('portalApp')
         $scope.nextItem = function() {
             var nextItem = $scope.portalHelpers.getNextListItem();
             $scope.showDetails(nextItem);
+        }
+        
+        $scope.getRadioValue = function (){
+            if (document.getElementById("oneStar").checked)
+                return 1;
+            if (document.getElementById("twoStars").checked)
+                return 2;
+            if (document.getElementById("threeStars").checked)
+                return 3;
+            if (document.getElementById("fourStars").checked)
+                return 4;
+            if (document.getElementById("fiveStars").checked)
+                return 5;
+        }
+        
+        $scope.calculateRate = function(){
+            
         }
 
     }])
