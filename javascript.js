@@ -61,7 +61,7 @@ angular.module('portalApp')
         }, {
             title: "Williams",
             address: "170 University Avenue West, Waterloo, ON, Canada",
-            style: "Eastern",
+            style: "Western",
             ratings: '5',
             icon : coffee,
             icon2 : sandwich,
@@ -111,7 +111,7 @@ angular.module('portalApp')
         // Handle form submit in the database test example
         $scope.insertData = function(item) {
             var d = new Date();
-            if ($scope.insertValue.value.length > 50)
+            if ($scope.insertValue.value.length > 500)
                 alert('value should be less than 50 characters');
             else {
                 $scope.portalHelpers.invokeServerFunction('insert', {
@@ -124,6 +124,17 @@ angular.module('portalApp')
                 });
                 $scope.insertValue.value = "";
             }
+            
+            $scope.portalHelpers.invokeServerFunction('calculateAverage').then(function(result){      
+        	var e = Enumerable.From($scope.model);
+            for(var i in result){
+            	var item = result[i];
+                var m = e.Where(function(x){
+                	return x.title == item.restaurant;
+                }).Single();
+                m.ratings = item.avg;
+            }
+        });
         };
 
         $scope.portalHelpers.invokeServerFunction('calculateAverage').then(function(result){      
