@@ -77,13 +77,13 @@ angular.module('portalApp')
         }
 
         // Handle form submit in the database test example
-        $scope.insertData = function(restaurant) {
+        $scope.insertData = function(item) {
             if ($scope.insertValue.value.length > 50)
                 alert('value should be less than 50 characters');
             else {
                 $scope.portalHelpers.invokeServerFunction('insert', {
                     value: $scope.insertValue.value,
-                    restaurant: restaurant.value.title
+                    restaurant: item.value.title
                 }).then(function(result) {
                     $scope.dbData.value = result;
                 });
@@ -93,15 +93,15 @@ angular.module('portalApp')
 
         // Handle click on an item in the list and search example
         $scope.showDetails = function(item) {
-            //
+            
             // Set which item to show in the details view
             $scope.item.value = item;
             // Show details view in the second column
             $scope.portalHelpers.showView('details.html', 2);
             $scope.portalHelpers.invokeServerFunction('getData', {
-                restaurant : item.value.title
+                restaurant : item.title
             }).then(function(result) {
-                dbData.value = result;
+                $scope.dbData.value = result;
                 sourceLoaded();
             });
         };
