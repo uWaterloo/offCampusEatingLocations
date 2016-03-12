@@ -19,33 +19,33 @@ offCampusEatingLocationsFactory) {
     // Model for the search and list example
     $scope.model = [{
         title: "Waterloo Star",
-        details: "Waterloo Star details",
-        foodType: "Eastern",
+        address: "170 University Avenue West, Waterloo, ON, Canada",
+        style: "Eastern",
         ratings: '5'
     }, {
         title: "Sogo",
-        details: "Sogo details",
-        foodType: "Eastern",
+        address: "170 University Avenue West, Waterloo, ON, Canada",
+        style: "Eastern",
         ratings: '5'
     }, {
         title: "Kenzo",
-        details: "Kenzo details",
-        foodType: "Eastern",
+        address: "170 University Avenue West, Waterloo, ON, Canada",
+        style: "Eastern",
         ratings: '5' 
     }, {
         title: "Williams",
-        details: "Williams details",
-        foodType: "Eastern",
+        address: "170 University Avenue West, Waterloo, ON, Canada",
+        style: "Eastern",
         ratings: '5'
     }, {
         title: "Nuri Village",
-        details: "Nuri Village details",
-        foodType: "Eastern",
+        address: "170 University Avenue West, Waterloo, ON, Canada",
+        style: "Eastern",
         ratings: '5'
     }, {
         title: "Mr. Sushi",
-        details: "Mr. Sushi details",
-        foodType: "Eastern",
+        address: "170 University Avenue West, Waterloo, ON, Canada",
+        style: "Eastern",
         ratings: '5'
     }];
 
