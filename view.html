@@ -17,15 +17,15 @@
             </widget-cell>
         </widget-row>
 
-        <widget-search label="What restaurant are you looking for?" placeholder="Type in a restaurant name" search-results-title="Search Results" data="model" min-char="0" fields="['title','details']">
-            <widget-filter fields="['foodType']" filters="[{value:'Eastern',text:'Eastern'},{value:'Western',text:'Western'}]">
-            
+        <widget-search label="What restaurant are you looking for?" placeholder="Type in a restaurant name" search-results-title="Behold" data="model" min-char="2" fields="['title','details']">
+            <widget-filter fields="['category']" filters="[{value:'Eastern',text:'Eastern'},{value:'Western',text:'Western'}]">
+           
             </widget-filter>
 
             <widget-searching>
                 <widget-list list="item in searchResults" show-items="3">
                     <widget-row clickable ng-click="showDetails(item)">
-                        <widget-cell fill>{{item.title} +  &#9733 + {item.ratings}</widget-cell>
+                        <widget-cell fill>{{item.title}}</widget-cell>
                         <widget-cell>
                             <widget-icon name="angle-right"></widget-icon>
                         </widget-cell>
@@ -41,7 +41,7 @@
                 </widget-row>
                 <widget-list list="item in model" show-items="3">
                     <widget-row clickable ng-click="showDetails(item)">
-                        <widget-cell fill>{{item.title}}    &#9733{{item.ratings}}</widget-cell>
+                        <widget-cell fill>{{item.title}}</widget-cell>
                         <widget-cell>
                             <widget-icon name="angle-right"></widget-icon>
                         </widget-cell>
