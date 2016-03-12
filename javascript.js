@@ -21,6 +21,7 @@ angular.module('portalApp')
     	var test=$sce.trustAsResourceUrl("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2895.4146072148083!2d-80.53988384863868!3d43.47281717902555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf401323dd441%3A0xc2bc480b90231754!2sWaterloo+Star!5e0!3m2!1sen!2sca!4v1457803922857");
         var waterlooStar=$sce.trustAsResourceUrl("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2895.4146072148083!2d-80.53988384863868!3d43.47281717902555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf401323dd441%3A0xc2bc480b90231754!2sWaterloo+Star!5e0!3m2!1sen!2sca!4v1457803922857");
         var sogo=$sce.trustAsResourceUrl("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92664.78523735823!2d-80.59420960287662!3d43.46530398904281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf4013bc9bc25%3A0x3e0668302d13b35f!2sSogo!5e0!3m2!1sen!2sca!4v1457815152390");
+        var kenzo=$sce.trustAsResourceUrl("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2895.4039616083387!2d-80.53756514863863!3d43.4730393790255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf407ca1e311d%3A0x237a7a97779ab8cb!2sKenzo+Ramen!5e0!3m2!1sen!2sca!4v1457807372264");
         // Model for the search and list example
         $scope.model = [{
             title: "Waterloo Star",
@@ -38,7 +39,8 @@ angular.module('portalApp')
             title: "Kenzo",
             address: "170 University Avenue West, Waterloo, ON, Canada",
             style: "Eastern",
-            ratings: '5'
+            ratings: '5',
+            mapurl: kenzo
         }, {
             title: "Williams",
             address: "170 University Avenue West, Waterloo, ON, Canada",
