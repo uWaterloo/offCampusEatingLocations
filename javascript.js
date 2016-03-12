@@ -85,12 +85,18 @@ offCampusEatingLocationsFactory) {
     
     // Handle click on an item in the list and search example
     $scope.showDetails = function (item) {
-        // var userInput = document.getElementById("userInput").value;
+        //
         // Set which item to show in the details view
         $scope.item.value = item;
         // Show details view in the second column
         $scope.portalHelpers.showView('details.html', 2);
     };
+    
+    // handle user clicking submit
+    $scope.printUserInput = function(item){
+    	var input = document.getElementById("userInput").value;
+        document.getElementById("output").innerHTML = input;
+    }
 
     // Handle "previous item" click from the details page
     $scope.prevItem = function () {
