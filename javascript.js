@@ -26,18 +26,21 @@ angular.module('portalApp')
         var nuri=$sce.trustAsResourceUrl("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2895.4668380877815!2d-80.54099904863871!3d43.47172697902547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf4013bc9bc25%3A0x525618b4173fd8a8!2sNuri+Village!5e0!3m2!1sen!2sca!4v1457815604044");
         var sushi=$sce.trustAsResourceUrl("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2895.4057438641235!2d-80.53777054863868!3d43.47300217902547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf40700b6ad09%3A0x554506f3899fde6a!2sMr+Sushi!5e0!3m2!1sen!2sca!4v1457815751202");
         
-    	var noodle=$sce.trustAsResourceUrl("http://comps.canstockphoto.com/can-stock-photo_csp23689176.jpg");
+    	var noodle=$sce.trustAsResourceUrl("https://cdn2.iconfinder.com/data/icons/food-ink/512/noodles-256.png");
     	var rice=$sce.trustAsResourceUrl("http://bisque.yulab.org/icons_hub/trialLogo.png");
+    	var sush=$sce.trustAsResourceUrl("https://cdn0.iconfinder.com/data/icons/cartoon-food/512/Food_512-15.png");
     	var spicy2=$sce.trustAsResourceUrl("http://www.indianoceanrestaurant.co.uk/app/assets/img/varIconCat5.svg");
-    	var spicy=$sce.trustAsResourceUrl("https://lh5.ggpht.com/k2lsRAvGdfkg9-S2uzDXKyOjpbVYRGvFwWkNqpRSMEJSQdvonXwjwWst-eEacgAxY9OW=w300");
-    	// Model for the search and list example
+    	var spicy=$sce.trustAsResourceUrl("http://www.maybankchinese.co.uk/images/Hot-Pepper-icon.png");
+    	var sandwich=$sce.trustAsResourceUrl("https://cdn2.iconfinder.com/data/icons/food-longshadow-buttons/512/burger-512.png");
+    	var coffee=$sce.trustAsResourceUrl("https://lh3.googleusercontent.com/iqiS89IirintnG7FwsNtpxhbwniY6cGiI48dgXCtBZR6RsKM6fdPV7lgicl8yvBocJ0=w300");	
+    // Model for the search and list example
         $scope.model = [{
             title: "Waterloo Star",
             address: "170 University Avenue West, Waterloo, ON, Canada",
             style: "Eastern",
             ratings: '5',
             icon : rice,
-            flavor : spicy2,
+            icon2 : noodle,
             mapurl: waterlooStar
         }, {
             title: "Sogo",
@@ -45,31 +48,39 @@ angular.module('portalApp')
             style: "Eastern",
             ratings: '5',
             icon : noodle,
-            flavor : spicy,
+            icon2 : spicy,
             mapurl: sogo
         }, {
             title: "Kenzo",
             address: "170 University Avenue West, Waterloo, ON, Canada",
             style: "Eastern",
             ratings: '5',
+            icon : noodle,
+            icon2: spicy2,
             mapurl: kenzo
         }, {
             title: "Williams",
             address: "170 University Avenue West, Waterloo, ON, Canada",
             style: "Eastern",
             ratings: '5',
+            icon : coffee,
+            icon2 : sandwich,
             mapurl: williams
         }, {
             title: "Nuri Village",
             address: "170 University Avenue West, Waterloo, ON, Canada",
             style: "Eastern",
             ratings: '5',
+            icon : noodle,
+            icon2 : spicy2,
             mapurl: nuri
         }, {
             title: "Mr. Sushi",
             address: "170 University Avenue West, Waterloo, ON, Canada",
             style: "Eastern",
             ratings: '5',
+            icon : sush,
+            icon2 : noodle,
             mapurl: sushi
         }];
 
