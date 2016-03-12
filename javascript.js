@@ -59,6 +59,7 @@ offCampusEatingLocationsFactory) {
 
     // Handle click on an item in the list and search example
     $scope.showDetails = function (item) {
+        // var userInput = document.getElementById("userInput").value;
         // Set which item to show in the details view
         $scope.item.value = item;
         // Show details view in the second column
