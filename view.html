@@ -91,7 +91,7 @@
         <div ng-if="!dbData.value.status">
             <widget-row>
                 <widget-cell>
-                    <form class="form-inline" ng-submit="insertData()">
+                    <form class="form-inline" ng-submit="insertData(item)">
                         <div class="input-group" style="width: 100%;">
                             <input type="text" id="userInput" class="form-control" ng-model="insertValue.value" placeholder="Enter your comment and submit" />
                             <span class="input-group-btn" style="overflow:hidden;">
@@ -107,6 +107,7 @@
                     <div class="pDetails">Id: {{item.id}}</div>
                     <div class="pDetails">User ID: {{item.userId}}</div>
                     <div class="pDetails">Value: {{item.value}}</div>
+                    <div class="pDetails">Restaurant: {{item.restaurant}}</div>
                 </widget-cell>
             </widget-row>
         </div>
