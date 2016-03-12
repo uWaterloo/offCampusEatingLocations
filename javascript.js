@@ -111,7 +111,7 @@ angular.module('portalApp')
         // Handle form submit in the database test example
         $scope.insertData = function(item) {
             var d = new Date();
-            if ($scope.insertValue.value.length > 50)
+            if ($scope.insertValue.value.length > 500)
                 alert('value should be less than 50 characters');
             else {
                 $scope.portalHelpers.invokeServerFunction('insert', {
