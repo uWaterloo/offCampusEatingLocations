@@ -25,7 +25,7 @@
             <widget-searching>
                 <widget-list list="item in searchResults" show-items="10">
                     <widget-row clickable ng-click="showDetails(item)">
-                        <widget-cell fill>{{item.title}} &#9733{{item.ratings}}</widget-cell>
+                        <widget-cell fill>{{item.title}} {{item.ratings}}&#9733</widget-cell>
                         <widget-cell>
                             <widget-icon name="angle-right"></widget-icon>
                         </widget-cell>
@@ -41,7 +41,7 @@
                 </widget-row>
                 <widget-list list="item in model" show-items="10">
                     <widget-row clickable ng-click="showDetails(item)">
-                        <widget-cell class="main" fill>{{item.title}} &#9733 {{item.ratings}}   <img class ="icon2" ng-src="{{item.icon}}"/> <img class ="icon2"ng-src="{{item.icon2}}"/></widget-cell>
+                        <widget-cell>{{item.title}} {{item.ratings}}&#9733  <img class ="icon2" ng-src="{{item.icon}}"/> <img class ="icon2"ng-src="{{item.icon2}}"/></widget-cell>
                         <widget-cell>
                             <widget-icon name="angle-right"></widget-icon>
                         </widget-cell>
@@ -75,7 +75,7 @@
             <widget-cell>
                 <p>Address: {{item.value.address}}</p>
                 <p>Style: {{item.value.style}}</p>
-                <p>UW Ratings: &#9733{{item.value.ratings}}</p>
+                <p>UW Ratings: {{item.value.ratings}}&#9733</p>
                 
             </widget-cell>
         </widget-row>
