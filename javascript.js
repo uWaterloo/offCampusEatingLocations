@@ -19,39 +19,49 @@ angular.module('portalApp')
         offCampusEatingLocationsFactory.init($scope);
 
     	var test=$sce.trustAsResourceUrl("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2895.4146072148083!2d-80.53988384863868!3d43.47281717902555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf401323dd441%3A0xc2bc480b90231754!2sWaterloo+Star!5e0!3m2!1sen!2sca!4v1457803922857");
+        var waterlooStar=$sce.trustAsResourceUrl("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2895.4146072148083!2d-80.53988384863868!3d43.47281717902555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf401323dd441%3A0xc2bc480b90231754!2sWaterloo+Star!5e0!3m2!1sen!2sca!4v1457803922857");
+        var sogo=$sce.trustAsResourceUrl("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92664.78523735823!2d-80.59420960287662!3d43.46530398904281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf4013bc9bc25%3A0x3e0668302d13b35f!2sSogo!5e0!3m2!1sen!2sca!4v1457815152390");
+        var kenzo=$sce.trustAsResourceUrl("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2895.4039616083387!2d-80.53756514863863!3d43.4730393790255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf407ca1e311d%3A0x237a7a97779ab8cb!2sKenzo+Ramen!5e0!3m2!1sen!2sca!4v1457807372264");
+        var williams=$sce.trustAsResourceUrl("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11581.615914727157!2d-80.5441580433868!3d43.4730390226613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf401323dd441%3A0x93dc4effd98a9bc8!2sWilliams+Fresh+Cafe!5e0!3m2!1sen!2sca!4v1457815484064");
+        var nuri=$sce.trustAsResourceUrl("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2895.4668380877815!2d-80.54099904863871!3d43.47172697902547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf4013bc9bc25%3A0x525618b4173fd8a8!2sNuri+Village!5e0!3m2!1sen!2sca!4v1457815604044");
+        var sushi=$sce.trustAsResourceUrl("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2895.4057438641235!2d-80.53777054863868!3d43.47300217902547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf40700b6ad09%3A0x554506f3899fde6a!2sMr+Sushi!5e0!3m2!1sen!2sca!4v1457815751202");
         // Model for the search and list example
         $scope.model = [{
             title: "Waterloo Star",
             address: "170 University Avenue West, Waterloo, ON, Canada",
             style: "Eastern",
-            ratings: '5'
+            ratings: '5',
+            mapurl: waterlooStar
         }, {
             title: "Sogo",
             address: "170 University Avenue West, Waterloo, ON, Canada",
             style: "Eastern",
-            ratings: '5'
+            ratings: '5',
+            mapurl: sogo
         }, {
             title: "Kenzo",
             address: "170 University Avenue West, Waterloo, ON, Canada",
             style: "Eastern",
-            ratings: '5'
+            ratings: '5',
+            mapurl: kenzo
         }, {
             title: "Williams",
             address: "170 University Avenue West, Waterloo, ON, Canada",
             style: "Eastern",
-            ratings: '5'
+            ratings: '5',
+            mapurl: williams
         }, {
             title: "Nuri Village",
             address: "170 University Avenue West, Waterloo, ON, Canada",
             style: "Eastern",
             ratings: '5',
-            mapurl: test
+            mapurl: nuri
         }, {
             title: "Mr. Sushi",
             address: "170 University Avenue West, Waterloo, ON, Canada",
             style: "Eastern",
             ratings: '5',
-            mapurl: test
+            mapurl: sushi
         }];
 
         // initialize the service
