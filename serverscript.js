@@ -8,15 +8,11 @@ function getData() {
     return queryResult;
 }
 
-// function calculateAverage() {
-//     var total = 0;
-//     var queryResult = db.Execute('SELECT ratings FROM table2 WHERE restaurant = @restaurant');
-//     var rows = JSON.parse(queryResult);
-// 	for (var i = 0; i < rows.length; i ++){
-//         total += (rows[i])
-//     }
-// 	return total/rows.length;
-// }
+function calculateAverage() {
+    var avg;
+    return db.Execute('SELECT AVG(rating) AS avg, restaurant FROM table2 group by restaurant');
+
+}
 
 // Create table
 function createTable() {
