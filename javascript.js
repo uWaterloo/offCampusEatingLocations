@@ -15,8 +15,8 @@ offCampusEatingLocationsFactory) {
 
     // Model for the search and list example
     $scope.model = [{
-        title: "item 1",
-        details: "item 1 details",
+        title: "Waterloo Star",
+        details: title + "details",
         category: '1'
     }, {
         title: "item 2",
