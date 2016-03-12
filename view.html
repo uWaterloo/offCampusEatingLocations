@@ -41,7 +41,7 @@
                 </widget-row>
                 <widget-list list="item in model" show-items="10">
                     <widget-row clickable ng-click="showDetails(item)">
-                        <widget-cell class="block">{{item.title}} {{item.ratings}} &#9733 <img class ="icon2" ng-src="{{item.icon}}"/> <img class ="icon2"ng-src="{{item.icon2}}"/></widget-cell>
+                        <widget-cell class="block" fill>{{item.title}} {{item.ratings}} &#9733 <img class ="icon2" ng-src="{{item.icon}}"/> <img class ="icon2"ng-src="{{item.icon2}}"/></widget-cell>
                         <widget-cell>
                             <widget-icon name="angle-right"></widget-icon>
                         </widget-cell>
@@ -95,7 +95,7 @@
                     <form class="form-inline" ng-submit="insertData(item)">
                         
                         
-                        <input type="radio" id="oneStar" name="rating" value=1> &#9733 1 </input>
+                        <input type="radio" id="oneStar" name="rating" value=1 checked="checked"> &#9733 1 </input>
                         <input type="radio" id="twoStars" name="rating" value=2> &#9733 2 </input>
                         <input type="radio" id="threeStars" name="rating" value=3> &#9733 3 </input>
                         <input type="radio" id="fourStars" name="rating" value=4> &#9733 4 </input>
