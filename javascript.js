@@ -20,27 +20,27 @@ offCampusEatingLocationsFactory) {
     $scope.model = [{
         title: "Waterloo Star",
         details: "Waterloo Star details",
-        category: 'Eastern'
+        location_category: 'Eastern'
     }, {
         title: "Sogo",
         details: "Sogo details",
-        category: 'Eastern'
+        location_category: 'Eastern'
     }, {
         title: "Kenzo",
         details: "Kenzo details",
-        category: 'Eastern'
+        location_category: 'Eastern'
     }, {
         title: "Williams",
         details: "Williams details",
-        category: 'Western'
+        location_category: 'Western'
     }, {
         title: "Nuri Village",
         details: "Nuri Village details",
-        category: 'Eastern'
+        location_category: 'Eastern'
     }, {
         title: "Mr. Sushi",
         details: "Mr. Sushi details",
-        category: 'Eastern'
+        location_category: 'Eastern'
     }];
 
     // initialize the service
