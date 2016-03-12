@@ -1,7 +1,7 @@
 angular.module('portalApp')
 
-.controller('sampleSimpleListCtrl', ['$scope', '$http', '$q', 'sampleSimpleListFactory', function ($scope, $http, $q,
-sampleSimpleListFactory) {
+.controller('offCampusEatingLocationsCtrl', ['$scope', '$http', '$q', 'offCampusEatingLocationsFactory', function ($scope, $http, $q,
+offCampusEatingLocationsFactory) {
 
     // Widget Configuration
     $scope.portalHelpers.config = {
@@ -10,7 +10,7 @@ sampleSimpleListFactory) {
     };
 
     // Import variables and functions from service
-    $scope.loading = sampleSimpleListFactory.loading;
+    $scope.loading = offCampusEatingLocationsFactory.loading;
     $scope.item = {value:''};
 
     // Model for the search and list example
@@ -41,7 +41,7 @@ sampleSimpleListFactory) {
     }];
 
     // initialize the service
-    sampleSimpleListFactory.init($scope);
+    offCampusEatingLocationsFactory.init($scope);
 
     // watch for changes in the loading variable
     $scope.$watch('loading.value', function () {
@@ -80,7 +80,7 @@ sampleSimpleListFactory) {
 
 }])
     // Factory maintains the state of the widget
-    .factory('sampleSimpleListFactory', ['$http', '$rootScope', '$filter', '$q', function ($http, $rootScope,
+    .factory('offCampusEatingLocationsFactory', ['$http', '$rootScope', '$filter', '$q', function ($http, $rootScope,
         $filter, $q) {
         var initialized = {
             value: false
