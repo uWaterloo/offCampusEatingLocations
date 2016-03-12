@@ -13,7 +13,6 @@ offCampusEatingLocationsFactory) {
     $scope.loading = offCampusEatingLocationsFactory.loading;
     $scope.item = {value:''};
     $scope.insertValue = offCampusEatingLocationsFactory.insertValue;
-    $scope.loading = offCampusEatingLocationsFactory.loading;
     $scope.dbData = offCampusEatingLocationsFactory.dbData;
     offCampusEatingLocationsFactory.init($scope);
 
@@ -21,27 +20,27 @@ offCampusEatingLocationsFactory) {
     $scope.model = [{
         title: "Waterloo Star",
         details: "Waterloo Star details",
-        category: 'Eastern'
+        location_category: 'Eastern'
     }, {
         title: "Sogo",
         details: "Sogo details",
-        category: 'Eastern'
+        location_category: 'Eastern'
     }, {
         title: "Kenzo",
         details: "Kenzo details",
-        category: 'Eastern'
+        location_category: 'Eastern'
     }, {
         title: "Williams",
         details: "Williams details",
-        category: 'Western'
+        location_category: 'Western'
     }, {
         title: "Nuri Village",
         details: "Nuri Village details",
-        category: 'Eastern'
+        location_category: 'Eastern'
     }, {
         title: "Mr. Sushi",
         details: "Mr. Sushi details",
-        category: 'Eastern'
+        location_category: 'Eastern'
     }];
 
     // initialize the service
@@ -85,6 +84,7 @@ offCampusEatingLocationsFactory) {
     
     // Handle click on an item in the list and search example
     $scope.showDetails = function (item) {
+        //
         // Set which item to show in the details view
         $scope.item.value = item;
         // Show details view in the second column
