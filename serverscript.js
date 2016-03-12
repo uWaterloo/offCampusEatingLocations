@@ -22,7 +22,7 @@ function createTable() {
     var row = JSON.parse(queryResult);
 
     if (row.length > 0 && typeof row[0].Error != 'undefined') {
-        db.Execute('CREATE TABLE table3(id INTEGER PRIMARY KEY IDENTITY(1,1), userId nvarchar(50), value nvarchar(50), restaurant nvarchar(50), rating INTEGER, date TEXT);');
+        db.Execute('CREATE TABLE table3(id INTEGER PRIMARY KEY IDENTITY(1,1), userId nvarchar(50), value nvarchar(500), restaurant nvarchar(50), rating INTEGER, date TEXT);');
         result = '{"status":"tableCreated"}';
     } else
         result = '{"status":"tableExist"}';
@@ -32,7 +32,7 @@ function createTable() {
 
 // Insert into the database
 function insert() {
-    if (args.Get("value").length > 50)
+    if (args.Get("value").length > 500)
         return '{"result":"error"}';
     else {
         db.Execute('INSERT INTO table3 VALUES(@currentUser,@value, @restaurant, @rating, @date)');
