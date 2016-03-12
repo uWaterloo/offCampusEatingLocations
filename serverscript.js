@@ -1,6 +1,6 @@
 // Retreive data from the database
 function getData() {
-    var queryResult = db.Execute('SELECT * FROM table1 WHERE restaurant = @restaurant');
+    var queryResult = db.Execute('SELECT * FROM table2 WHERE restaurant = @restaurant');
     var rows = JSON.parse(queryResult);
     if (rows.length > 0 && typeof rows[0].Error != 'undefined') {
         return '{"status":"noTable"}';
@@ -12,11 +12,11 @@ function getData() {
 function createTable() {
     var result = {};
 
-    var queryResult = db.Execute('SELECT TOP 1 * FROM table1');
+    var queryResult = db.Execute('SELECT TOP 1 * FROM table2');
     var row = JSON.parse(queryResult);
 
     if (row.length > 0 && typeof row[0].Error != 'undefined') {
-        db.Execute('CREATE TABLE table1(id INTEGER PRIMARY KEY IDENTITY(1,1), userId nvarchar(50), value nvarchar(50), restaurant nvarchar(50));');
+        db.Execute('CREATE TABLE table2(id INTEGER PRIMARY KEY IDENTITY(1,1), userId nvarchar(50), value nvarchar(50), restaurant nvarchar(50), rating INTEGER, date TEXT);');
         result = '{"status":"tableCreated"}';
     } else
         result = '{"status":"tableExist"}';
@@ -29,7 +29,7 @@ function insert() {
     if (args.Get("value").length > 50)
         return '{"result":"error"}';
     else {
-        db.Execute('INSERT INTO table1 VALUES(@currentUser,@value, @restaurant)');
+        db.Execute('INSERT INTO table2 VALUES(@currentUser,@value, @restaurant, @rating, @date)');
         return getData();
     }
 }
