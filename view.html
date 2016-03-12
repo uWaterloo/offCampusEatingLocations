@@ -41,7 +41,7 @@
                 </widget-row>
                 <widget-list list="item in model" show-items="3">
                     <widget-row clickable ng-click="showDetails(item)">
-                        <widget-cell fill>{{item.title}} &#9733{{item.ratings}}</widget-cell>
+                        <widget-cell class="header" fill>{{item.title}} <span style="color:yellow">&#9733</span>{{item.ratings}}</widget-cell>
                         <widget-cell>
                             <widget-icon name="angle-right"></widget-icon>
                         </widget-cell>
@@ -67,7 +67,7 @@
         <widget-list-controls prev-click="prevItem" next-click="nextItem" original-item="item.value" prev-text="Previous Item" next-text="Next Item"></widget-list-controls>
         <widget-row>
             <widget-cell>
-                <h2>{{item.value.title}}</h2>
+                <h2 class ="header">{{item.value.title}}</h2>
             </widget-cell>
         </widget-row>
         <iframe ng-src="{{item.value.mapurl}}" width=600px height=450px></iframe>
@@ -75,7 +75,7 @@
             <widget-cell>
                 <p>Address: {{item.value.address}}</p>
                 <p>Style: {{item.value.style}}</p>
-                <p>Ratings: &#9733{{item.value.ratings}}</p>
+                <p>Ratings: <span style="color:yellow">&#9733</span>{{item.value.ratings}}</p>
                 
             </widget-cell>
         </widget-row>
