@@ -4,7 +4,12 @@
     line-height: 1.3em;   
 }
 
-.main{
-    font-weight: 400;
-    line-height: 1.3em;
+.icon{
+    width :60px;
+    height : auto;
+}
+
+.icon2{
+    width : 30px;
+    height : auto;
 }
