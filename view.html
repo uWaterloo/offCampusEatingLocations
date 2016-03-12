@@ -62,11 +62,28 @@
 
 
 
+
 <!-- Menu template -->
 <script type="text/ng-template" id="widgetMenu.html">
     <li>
-        <a>
-            Menu button
+        <a ng-click="menuButtonClick()">
+            Logout
         </a>
     </li>
+</script>
+
+<!-- VIEW FOR THE SEARCH AND LIST EXAMPLE -->
+<script type="text/ng-template" id="details.html">
+    <widget-list-controls prev-click="prevItem" next-click="nextItem" original-item="item.value" prev-text="Previous Item"
+                          next-text="Next Item"></widget-list-controls>
+    <widget-row>
+        <widget-cell>
+            <h2>{{item.value.title}}</h2>
+        </widget-cell>
+    </widget-row>
+    <widget-row>
+        <widget-cell>
+            <div class="pHighlight">{{item.value.details}}</div>
+        </widget-cell>
+    </widget-row>
 </script>
