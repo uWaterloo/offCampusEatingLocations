@@ -29,7 +29,7 @@ function insert() {
     if (args.Get("value").length > 50)
         return '{"result":"error"}';
     else {
-        db.Execute('INSERT INTO sampleTable VALUES(@currentUser,@value)');
+        db.Execute('INSERT INTO sampleTable VALUES(@restaurantName,@currentUser,@value)');
         return getData();
     }
 }
