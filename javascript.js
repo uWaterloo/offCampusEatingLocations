@@ -27,7 +27,7 @@ angular.module('portalApp')
         var sushi=$sce.trustAsResourceUrl("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2895.4057438641235!2d-80.53777054863868!3d43.47300217902547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf40700b6ad09%3A0x554506f3899fde6a!2sMr+Sushi!5e0!3m2!1sen!2sca!4v1457815751202");
         
     	var noodle=$sce.trustAsResourceUrl("https://cdn2.iconfinder.com/data/icons/food-ink/512/noodles-256.png");
-    	var rice=$sce.trustAsResourceUrl("http://bisque.yulab.org/icons_hub/trialLogo.png");
+    	var rice=$sce.trustAsResourceUrl("https://cdn2.iconfinder.com/data/icons/bright-food-products/512/rice-512.png");
     	var sush=$sce.trustAsResourceUrl("https://cdn0.iconfinder.com/data/icons/cartoon-food/512/Food_512-15.png");
     	var spicy2=$sce.trustAsResourceUrl("http://www.indianoceanrestaurant.co.uk/app/assets/img/varIconCat5.svg");
     	var spicy=$sce.trustAsResourceUrl("http://www.maybankchinese.co.uk/images/Hot-Pepper-icon.png");
