@@ -20,27 +20,33 @@ offCampusEatingLocationsFactory) {
     $scope.model = [{
         title: "Waterloo Star",
         details: "Waterloo Star details",
-        location_category: 'Eastern'
+        foodType: "Eastern",
+        location: "UW plaza"
     }, {
         title: "Sogo",
         details: "Sogo details",
-        location_category: 'Eastern'
+        foodType: "Eastern",
+        location: "UW plaza"
     }, {
         title: "Kenzo",
         details: "Kenzo details",
-        location_category: 'Eastern'
+        foodType: "Eastern",
+        location: "UW plaza"
     }, {
         title: "Williams",
         details: "Williams details",
-        location_category: 'Western'
+        foodType: "Eastern",
+        location: "UW plaza"
     }, {
         title: "Nuri Village",
         details: "Nuri Village details",
-        location_category: 'Eastern'
+        foodType: "Eastern",
+        location: "UW plaza"
     }, {
         title: "Mr. Sushi",
         details: "Mr. Sushi details",
-        location_category: 'Eastern'
+        foodType: "Eastern",
+        location: "UW plaza"
     }];
 
     // initialize the service
