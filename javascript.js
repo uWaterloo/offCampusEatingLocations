@@ -83,7 +83,6 @@ angular.module('portalApp')
             icon2 : noodle,
             mapurl: sushi
         }];
-
         // initialize the service
         offCampusEatingLocationsFactory.init($scope);
 
@@ -127,6 +126,18 @@ angular.module('portalApp')
             }
         };
 
+        $scope.portalHelpers.invokeServerFunction('calculateAverage').then(function(result){      
+        	var e = Enumerable.From($scope.model);
+            for(var i in result){
+            	var item = result[i];
+                var m = e.Where(function(x){
+                	return x.title == item.restaurant;
+                }).Single();
+                m.ratings = item.avg;
+            }
+        });
+
+    
         // Handle click on an item in the list and search example
         $scope.showDetails = function(item) {
             
@@ -166,10 +177,6 @@ angular.module('portalApp')
                 return 4;
             if (document.getElementById("fiveStars").checked)
                 return 5;
-        }
-        
-        $scope.calculateRate = function(){
-            
         }
 
     }])
