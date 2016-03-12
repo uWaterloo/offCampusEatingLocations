@@ -89,7 +89,7 @@
                 <widget-cell>
                     <form class="form-inline" ng-submit="insertData()">
                         <div class="input-group" style="width: 100%;">
-                            <input type="text" class="form-control" ng-model="insertValue.value" placeholder="Enter some text and submit" />
+                            <input type="text" id = "userInput" class="form-control" ng-model="insertValue.value" placeholder="Enter some text and submit" />
                             <span class="input-group-btn" style="overflow:hidden;">
                                 <button class="btn btn-primary glyphicon glyphicon glyphicon-ok btn" type="submit" style="margin-top: -1px;"></button>
                             </span>
@@ -101,7 +101,7 @@
             <widget-row ng-repeat="item in dbData.value">
                 <widget-cell>
                     <div class="pDetails">Id: {{item.id}}</div>
-                    <div class="pDetails">UserId: {{item.userId}}</div>
+                    <div class="pDetails">User ID: {{item.userId}}</div>
                     <div class="pDetails">Value: {{item.value}}</div>
                 </widget-cell>
             </widget-row>
