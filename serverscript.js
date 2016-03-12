@@ -16,7 +16,7 @@ function createTable() {
     var row = JSON.parse(queryResult);
 
     if (row.length > 0 && typeof row[0].Error != 'undefined') {
-        db.Execute('CREATE TABLE sampleTable(id INTEGER PRIMARY KEY IDENTITY(1,1), userId nvarchar(50), value nvarchar(50));');
+        db.Execute('CREATE TABLE sampleTable(id INTEGER PRIMARY KEY IDENTITY(1,1), userId nvarchar(50), restaurant nvarchar(50), value nvarchar(50));');
         result = '{"status":"tableCreated"}';
     } else
         result = '{"status":"tableExist"}';
@@ -26,10 +26,10 @@ function createTable() {
 
 // Insert into the database
 function insert() {
-    if (args.Get("value").length > 50)
+    if (args.Get("value").length > 50||args.Get("resturant").length > 50)
         return '{"result":"error"}';
     else {
-        db.Execute('INSERT INTO sampleTable VALUES(@currentUser,@value)');
+        db.Execute('INSERT INTO sampleTable VALUES(@currentUser,@restuarant, @value)');
         return getData();
     }
 }
