@@ -8,6 +8,16 @@ function getData() {
     return queryResult;
 }
 
+// function calculateAverage() {
+//     var total = 0;
+//     var queryResult = db.Execute('SELECT ratings FROM table2 WHERE restaurant = @restaurant');
+//     var rows = JSON.parse(queryResult);
+// 	for (var i = 0; i < rows.length; i ++){
+//         total += (rows[i])
+//     }
+// 	return total/rows.length;
+// }
+
 // Create table
 function createTable() {
     var result = {};
