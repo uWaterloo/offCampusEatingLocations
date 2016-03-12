@@ -1,6 +1,6 @@
 // Retreive data from the database
 function getData() {
-    var queryResult = db.Execute('SELECT * FROM table1');
+    var queryResult = db.Execute('SELECT * FROM table1 WHERE restaurant = @restaurant');
     var rows = JSON.parse(queryResult);
     if (rows.length > 0 && typeof rows[0].Error != 'undefined') {
         return '{"status":"noTable"}';
