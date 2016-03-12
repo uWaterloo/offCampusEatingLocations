@@ -34,6 +34,7 @@ offCampusEatingLocationsFactory) {
         details: "Kenzo details",
         foodType: "Eastern",
         location: "UW plaza"
+        mapurl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2895.4039616083387!2d-80.53756514863863!3d43.4730393790255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf407ca1e311d%3A0x237a7a97779ab8cb!2sKenzo+Ramen!5e0!3m2!1sen!2sca!4v1457806763484"
     }, {
         title: "Williams",
         details: "Williams details",
