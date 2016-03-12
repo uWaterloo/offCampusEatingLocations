@@ -17,14 +17,15 @@
             </widget-cell>
         </widget-row>
 
-        <widget-search label="What restaurant are you looking for?" placeholder="Type in a restaurant name" search-results-title="Search Results" data="model" min-char="0" fields="['title','details']">
-            <widget-filter fields="['foodType']" filters="[{value:'Eastern',text:'Eastern'},{value:'Western',text:'Western'}]">
+        <widget-search label="What restaurant are you looking for?" placeholder="Type in a restaurant name" search-results-title="Behold" data="model" min-char="2" fields="['title','details']">
+            <widget-filter fields="['category']" filters="[{value:'Eastern',text:'Eastern'},{value:'Western',text:'Western'}]">
+           
             </widget-filter>
 
             <widget-searching>
                 <widget-list list="item in searchResults" show-items="3">
                     <widget-row clickable ng-click="showDetails(item)">
-                        <widget-cell fill>{{item.title}} &#9733{{item.ratings}}</widget-cell>
+                        <widget-cell fill>{{item.title}}</widget-cell>
                         <widget-cell>
                             <widget-icon name="angle-right"></widget-icon>
                         </widget-cell>
@@ -40,7 +41,7 @@
                 </widget-row>
                 <widget-list list="item in model" show-items="3">
                     <widget-row clickable ng-click="showDetails(item)">
-                        <widget-cell fill>{{item.title}} &#9733{{item.ratings}}</widget-cell>
+                        <widget-cell fill>{{item.title}}</widget-cell>
                         <widget-cell>
                             <widget-icon name="angle-right"></widget-icon>
                         </widget-cell>
@@ -50,31 +51,31 @@
         </widget-search>
     </div>
 
+ 
 
-
-    <!-- Menu template -->
-    <script type="text/ng-template" id="widgetMenu.html">
-        <li>
-            <a ng-click="menuButtonClick()">
+<!-- Menu template -->
+<script type="text/ng-template" id="widgetMenu.html">
+    <li>
+        <a ng-click="menuButtonClick()">
             Logout
         </a>
-        </li>
-    </script>
+    </li>
+</script>
 
-    <!-- VIEW FOR THE SEARCH AND LIST EXAMPLE -->
-    <script type="text/ng-template" id="details.html">
-        <widget-list-controls prev-click="prevItem" next-click="nextItem" original-item="item.value" prev-text="Previous Item" next-text="Next Item"></widget-list-controls>
-        <widget-row>
-            <widget-cell>
-                <h2>{{item.value.title}}</h2>
-            </widget-cell>
-        </widget-row>
-        <widget-row>
-            <widget-cell>
-                <div class="pHighlight">{{item.value.details}}</div>
-            </widget-cell>
-        </widget-row>
-        <div ng-if="dbData.value.status">
+<!-- VIEW FOR THE SEARCH AND LIST EXAMPLE -->
+<script type="text/ng-template" id="details.html">
+    <widget-list-controls prev-click="prevItem" next-click="nextItem" original-item="item.value" prev-text="Previous Item" next-text="Next Item"></widget-list-controls>
+    <widget-row>
+        <widget-cell>
+            <h2>{{item.value.title}}</h2>
+        </widget-cell>
+    </widget-row>
+    <widget-row>
+        <widget-cell>
+            <div class="pHighlight">{{item.value.details}}</div>
+        </widget-cell>
+    </widget-row>
+<div ng-if="dbData.value.status">
             <widget-row>
                 <widget-cell>
                     <div class="pDetails" ng-if="dbData.value.status=='noTable'">
@@ -89,7 +90,7 @@
                 <widget-cell>
                     <form class="form-inline" ng-submit="insertData()">
                         <div class="input-group" style="width: 100%;">
-                            <input type="text" id="userInput" class="form-control" ng-model="insertValue.value" placeholder="Enter some text and submit" />
+                            <input type="text" id = "userInput" class="form-control" ng-model="insertValue.value" placeholder="Enter some text and submit" />
                             <span class="input-group-btn" style="overflow:hidden;">
                                 <button class="btn btn-primary glyphicon glyphicon glyphicon-ok btn" type="submit" style="margin-top: -1px;"></button>
                             </span>
@@ -106,4 +107,4 @@
                 </widget-cell>
             </widget-row>
         </div>
-    </script>
+</script>

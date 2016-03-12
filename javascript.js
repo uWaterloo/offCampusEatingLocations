@@ -21,32 +21,33 @@ offCampusEatingLocationsFactory) {
         title: "Waterloo Star",
         details: "Waterloo Star details",
         foodType: "Eastern",
-        ratings: '5'
+        location: "UW plaza"
+        mapurl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2895.4146072148083!2d-80.53988384863868!3d43.47281717902555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf401323dd441%3A0xc2bc480b90231754!2sWaterloo+Star!5e0!3m2!1sen!2sca!4v1457803922857"
     }, {
         title: "Sogo",
         details: "Sogo details",
         foodType: "Eastern",
-        ratings: '5'
+        location: "UW plaza"
     }, {
         title: "Kenzo",
         details: "Kenzo details",
         foodType: "Eastern",
-        ratings: '5' 
+        location: "UW plaza"
     }, {
         title: "Williams",
         details: "Williams details",
         foodType: "Eastern",
-        ratings: '5'
+        location: "UW plaza"
     }, {
         title: "Nuri Village",
         details: "Nuri Village details",
         foodType: "Eastern",
-        ratings: '5'
+        location: "UW plaza"
     }, {
         title: "Mr. Sushi",
         details: "Mr. Sushi details",
         foodType: "Eastern",
-        ratings: '5'
+        location: "UW plaza"
     }];
 
     // initialize the service
