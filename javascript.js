@@ -37,7 +37,6 @@ offCampusEatingLocationsFactory) {
         details: "Williams details",
         foodType: "Eastern",
         location: "UW plaza"
-        mapurl: ""
     }, {
         title: "Nuri Village",
         details: "Nuri Village details",
