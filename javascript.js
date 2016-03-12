@@ -19,33 +19,33 @@ offCampusEatingLocationsFactory) {
     // Model for the search and list example
     $scope.model = [{
         title: "Waterloo Star",
-        address: "170 University Ave W, Waterloo, ON N2L 3E9, Canada",
-        style: "Eastern",
+        details: "Waterloo Star details",
+        foodType: "Eastern",
         ratings: '5'
     }, {
         title: "Sogo",
-        address: "170 University Ave W, Waterloo, ON N2L 3E9, Canada",
-        style: "Eastern",
+        details: "Sogo details",
+        foodType: "Eastern",
         ratings: '5'
     }, {
         title: "Kenzo",
-        address: "140 University Avenue #6A, Waterloo, ON N2L 6J3, Canada",
-        style: "Eastern",
-        ratings: '5'
+        details: "Kenzo details",
+        foodType: "Eastern",
+        ratings: '5' 
     }, {
         title: "Williams",
-        address: "170 University Ave W, Waterloo, ON N2L 3E9, Canada",
-        style: "Eastern",
+        details: "Williams details",
+        foodType: "Eastern",
         ratings: '5'
     }, {
         title: "Nuri Village",
-        style: "170 University Ave W, Waterloo, ON N2L 3E9, Canada",
+        details: "Nuri Village details",
         foodType: "Eastern",
         ratings: '5'
     }, {
         title: "Mr. Sushi",
-        address: "140 University Avenue, Waterloo, ON N2L 6J3, Canada",
-        style: "Eastern",
+        details: "Mr. Sushi details",
+        foodType: "Eastern",
         ratings: '5'
     }];
 
@@ -81,10 +81,12 @@ offCampusEatingLocationsFactory) {
         else {
             $scope.portalHelpers.invokeServerFunction('insert', {
                 value: $scope.insertValue.value
+                //restaurant: $scope.insertValue.restaurant
             }).then(function (result) {
                 $scope.dbData.value = result;
             });
             $scope.insertValue.value = "";
+            //$scope.insertValue.restaurant = "";
         }
     };
     
