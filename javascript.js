@@ -28,6 +28,7 @@ offCampusEatingLocationsFactory) {
         details: "Sogo details",
         foodType: "Eastern",
         location: "UW plaza"
+        mapurl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5790.787837246627!2d-80.536543!3d43.473249!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3e0668302d13b35f!2sSogo!5e0!3m2!1sen!2sca!4v1457806628929"
     }, {
         title: "Kenzo",
         details: "Kenzo details",
