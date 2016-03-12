@@ -95,11 +95,11 @@
                     <form class="form-inline" ng-submit="insertData(item)">
                         
                         
-                        <input type="radio" id="oneStar" name="rating" value=1> &#9733 1
-                        <input type="radio" id="twoStars" name="rating" value=2> &#9733 2  
-                        <input type="radio" id="threeStars" name="rating" value=3> &#9733 3  
-                        <input type="radio" id="fourStars" name="rating" value=4> &#9733 4  
-                        <input type="radio" id="fiveStars" name="rating" value=5> &#9733 5  
+                        <input type="radio" id="oneStar" name="rating" value=1> &#9733 1 </input>
+                        <input type="radio" id="twoStars" name="rating" value=2> &#9733 2 </input>
+                        <input type="radio" id="threeStars" name="rating" value=3> &#9733 3 </input>
+                        <input type="radio" id="fourStars" name="rating" value=4> &#9733 4 </input>
+                        <input type="radio" id="fiveStars" name="rating" value=5> &#9733 5 </input>
                         
                         
                         <div class="input-group" style="width: 100%;">
@@ -115,10 +115,10 @@
 
             <widget-row ng-repeat="item in dbData.value">
                 <widget-cell>
+                    <div class="pDetails" align="right"><b>{{item.date}}</b></div>
                     <div class="pDetails">UW ID: {{item.userId}}</div>
                     <div class="pDetails">Comment: {{item.value}}</div>
-                    <div class="pDetails">Date: {{item.date}}</div>
-                    <div class="pDetails">Ratings: {{item.rating}}</div>
+                    <div class="pDetails">Rating: {{item.rating}}</div>
                 </widget-cell>
             </widget-row>
         </div>
