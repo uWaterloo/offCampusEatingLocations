@@ -12,6 +12,10 @@ offCampusEatingLocationsFactory) {
     // Import variables and functions from service
     $scope.loading = offCampusEatingLocationsFactory.loading;
     $scope.item = {value:''};
+    $scope.insertValue = offCampusEatingLocationsFactory.insertValue;
+    $scope.loading = offCampusEatingLocationsFactory.loading;
+    $scope.dbData = offCampusEatingLocationsFactory.dbData;
+    offCampusEatingLocationsFactory.init($scope);
 
     // Model for the search and list example
     $scope.model = [{
@@ -57,6 +61,28 @@ offCampusEatingLocationsFactory) {
         }
     });
 
+    // Create table, invoked by a button press from database test example
+    $scope.createTable = function () {
+        $scope.portalHelpers.invokeServerFunction('createTable').then(function (
+            result) {
+            $scope.dbData.value = [];
+        });
+    }
+
+    // Handle form submit in the database test example
+    $scope.insertData = function () {
+        if ($scope.insertValue.value.length > 50)
+            alert('value should be less than 50 characters');
+        else {
+            $scope.portalHelpers.invokeServerFunction('insert', {
+                value: $scope.insertValue.value
+            }).then(function (result) {
+                $scope.dbData.value = result;
+            });
+            $scope.insertValue.value = "";
+        }
+    };
+    
     // Handle click on an item in the list and search example
     $scope.showDetails = function (item) {
         // var userInput = document.getElementById("userInput").value;
@@ -92,14 +118,26 @@ offCampusEatingLocationsFactory) {
             value: true
         };
 
+           var insertValue = {
+            value: null
+        };
+
+        var dbData = {
+            value: null
+        };
+
         var sourcesLoaded = 0;
 
         var init = function ($scope) {
             if (initialized.value)
                 return;
             initialized.value = true;
+            
             // Place your init code here:
+              $scope.portalHelpers.invokeServerFunction('getData').then(function (result) {
+                dbData.value = result;
             sourceLoaded();
+                  });
         }
 
         function sourceLoaded() {
@@ -110,7 +148,9 @@ offCampusEatingLocationsFactory) {
 
         return {
             init: init,
-            loading: loading
+            loading: loading,
+            insertValue: insertValue,
+            dbData: dbData
         };
 
     }]);
