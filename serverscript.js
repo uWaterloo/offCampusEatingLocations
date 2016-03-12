@@ -16,7 +16,7 @@ function createTable() {
     var row = JSON.parse(queryResult);
 
     if (row.length > 0 && typeof row[0].Error != 'undefined') {
-        db.Execute('CREATE TABLE table1(id INTEGER PRIMARY KEY IDENTITY(1,1), userId nvarchar(50), value nvarchar(50), restaurant nvarchar(50));');
+        db.Execute('CREATE TABLE table1(id INTEGER PRIMARY KEY IDENTITY(1,1), userId nvarchar(50), value nvarchar(50), restaurant nvarchar(50), );');
         result = '{"status":"tableCreated"}';
     } else
         result = '{"status":"tableExist"}';
