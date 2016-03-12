@@ -8,7 +8,7 @@ function getData() {
     return queryResult;
 }
 
-// Create talbe
+// Create table
 function createTable() {
     var result = {};
 
@@ -23,7 +23,6 @@ function createTable() {
 
     return JSON.stringify(result);
 }
-
 
 // Insert into the database
 function insert() {
