@@ -9,7 +9,7 @@ function getData() {
 }
 
 // Create table
-function createTable() {
+function createTable(string name) {
     var result = {};
 
     var queryResult = db.Execute('SELECT TOP 1 * FROM sampleTable');
