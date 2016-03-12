@@ -41,7 +41,7 @@
                 </widget-row>
                 <widget-list list="item in model" show-items="10">
                     <widget-row clickable ng-click="showDetails(item)">
-                        <widget-cell class="block">{{item.title}} {{item.ratings}} &#9733 <img class ="icon2" ng-src="{{item.icon}}"/> <img class ="icon2"ng-src="{{item.icon2}}"/></widget-cell>
+                        <widget-cell class="block" fill>{{item.title}} {{item.ratings}} &#9733 <img class ="icon2" ng-src="{{item.icon}}"/> <img class ="icon2"ng-src="{{item.icon2}}"/></widget-cell>
                         <widget-cell>
                             <widget-icon name="angle-right"></widget-icon>
                         </widget-cell>
