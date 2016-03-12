@@ -17,9 +17,9 @@
             </widget-cell>
         </widget-row>
 
-        <widget-search label="What restaurant are you looking for?" placeholder="Type in a restaurant name" search-results-title="Behold" data="model" min-char="2" fields="['title','details']">
-            <widget-filter fields="['location_category']" filters="[{value:'Eastern',text:'Eastern'},{value:'Western',text:'Western'}]">
-           
+        <widget-search label="What restaurant are you looking for?" placeholder="Type in a restaurant name" search-results-title="Search Results" data="model" min-char="0" fields="['title','details']">
+            <widget-filter fields="['foodType']" filters="[{value:'Eastern',text:'Eastern'},{value:'Western',text:'Western'}]", fields="['location']" filters="[{value:'UW plaza',text:'UW plaza'},{value:'other',text:'other'}]">
+            
             </widget-filter>
 
             <widget-searching>
