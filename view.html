@@ -93,7 +93,17 @@
             <widget-row>
                 <widget-cell>
                     <form class="form-inline" ng-submit="insertData(item)">
+                        
+                        <div>
+                        <input type="radio" id="oneStar" name="rating" value=1> &#9733 1
+                        <input type="radio" id="twoStars" name="rating" value=2> &#9733 2  
+                        <input type="radio" id="threeStars" name="rating" value=3> &#9733 3  
+                        <input type="radio" id="fourStars" name="rating" value=4> &#9733 4  
+                        <input type="radio" id="fiveStars" name="rating" value=5> &#9733 5  
+                        </div>
+                        
                         <div class="input-group" style="width: 100%;">
+                            
                             <input type="text" id="userInput" class="form-control" ng-model="insertValue.value" placeholder="Enter your comment and submit" />
                             <span class="input-group-btn" style="overflow:hidden;">
                                 <button class="btn btn-primary glyphicon glyphicon glyphicon-ok btn" type="submit" style="margin-top: -1px;"></button>
