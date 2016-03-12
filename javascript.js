@@ -75,18 +75,17 @@ offCampusEatingLocationsFactory) {
     }
 
     // Handle form submit in the database test example
-    $scope.insertData = function () {
+    $scope.insertData = function (restaurant) {
         if ($scope.insertValue.value.length > 50)
             alert('value should be less than 50 characters');
         else {
             $scope.portalHelpers.invokeServerFunction('insert', {
-                value: $scope.insertValue.value
-                //restaurant: $scope.insertValue.restaurant
+                value: $scope.insertValue.value,
+                restaurant: restaurant.value.title
             }).then(function (result) {
                 $scope.dbData.value = result;
             });
             $scope.insertValue.value = "";
-            //$scope.insertValue.restaurant = "";
         }
     };
     
