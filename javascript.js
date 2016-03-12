@@ -13,7 +13,6 @@ offCampusEatingLocationsFactory) {
     $scope.loading = offCampusEatingLocationsFactory.loading;
     $scope.item = {value:''};
     $scope.insertValue = offCampusEatingLocationsFactory.insertValue;
-    $scope.loading = offCampusEatingLocationsFactory.loading;
     $scope.dbData = offCampusEatingLocationsFactory.dbData;
     offCampusEatingLocationsFactory.init($scope);
 
