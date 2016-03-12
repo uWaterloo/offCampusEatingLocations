@@ -1,7 +1,7 @@
 angular.module('portalApp')
 
-.controller('offCampusEatingLocationsCtrl', ['$scope', '$http', '$q', 'offCampusEatingLocationsFactory', function($scope, $http, $q,
-        offCampusEatingLocationsFactory) {
+.controller('offCampusEatingLocationsCtrl', ['$scope','$http', '$q', 'offCampusEatingLocationsFactory', '$sce',function($scope, $http, $q,
+        offCampusEatingLocationsFactory,$sce) {
 
         // Widget Configuration
         $scope.portalHelpers.config = {
@@ -18,6 +18,7 @@ angular.module('portalApp')
         $scope.dbData = offCampusEatingLocationsFactory.dbData;
         offCampusEatingLocationsFactory.init($scope);
 
+    	var test=$sce.trustAsResourceUrl("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2895.4146072148083!2d-80.53988384863868!3d43.47281717902555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf401323dd441%3A0xc2bc480b90231754!2sWaterloo+Star!5e0!3m2!1sen!2sca!4v1457803922857");
         // Model for the search and list example
         $scope.model = [{
             title: "Waterloo Star",
@@ -43,12 +44,14 @@ angular.module('portalApp')
             title: "Nuri Village",
             address: "170 University Avenue West, Waterloo, ON, Canada",
             style: "Eastern",
-            ratings: '5'
+            ratings: '5',
+            mapurl: test
         }, {
             title: "Mr. Sushi",
             address: "170 University Avenue West, Waterloo, ON, Canada",
             style: "Eastern",
-            ratings: '5'
+            ratings: '5',
+            mapurl: test
         }];
 
         // initialize the service
