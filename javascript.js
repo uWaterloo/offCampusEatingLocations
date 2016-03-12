@@ -83,7 +83,6 @@ angular.module('portalApp')
             icon2 : noodle,
             mapurl: sushi
         }];
-
         // initialize the service
         offCampusEatingLocationsFactory.init($scope);
 
